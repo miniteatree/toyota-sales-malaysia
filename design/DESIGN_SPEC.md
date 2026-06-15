@@ -61,7 +61,7 @@ System sans-serif stack using Inter-compatible metrics. Headings use tight line-
 Official Toyota Malaysia model images have been saved under `design/assets/cars/` and are referenced locally by the landing page.
 
 Current local files:
-- `vios.png`
+- `vios.jpg`
 - `corolla.png`
 - `camry.png`
 - `yaris-cross.png`
