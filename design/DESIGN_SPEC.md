@@ -3,6 +3,9 @@
 ## Visual direction
 Modern, trustworthy automotive landing page for Lim, a Toyota sales advisor in Penang. The page is now model-lineup focused rather than Vios-only, helping customers choose by Toyota category and enquire through WhatsApp.
 
+## Hero visual refinement
+The mobile hero uses one clean featured Toyota model image inside a showroom-style card, with small model-category tags. Avoid stacked multi-car collages on mobile because they look cramped and accidental.
+
 ## Model content direction
 Use current Toyota Malaysia categories and examples:
 - Sedan: Vios, Corolla, Camry
