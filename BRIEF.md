@@ -2,7 +2,7 @@
 
 ## Project goal
 Create a simple, high-conversion website for a Toyota sales representative in Malaysia.
-Primary goal: generate qualified leads via WhatsApp inquiries.
+Primary goal: generate qualified Toyota model enquiries via WhatsApp.
 
 ## Confirmed project direction
 - Static website
@@ -10,14 +10,14 @@ Primary goal: generate qualified leads via WhatsApp inquiries.
 - English language
 - Penang-focused
 - Sales representative name: Lim
-- Primary featured model: Toyota Vios
+- Featured scope: current Toyota Malaysia model lineup, not Vios-only
 - Primary CTA: WhatsApp only
 
 ## Target audience
-- Penang buyers researching a Toyota Vios
-- Malaysians comparing promotions / installment options
+- Penang buyers researching Toyota cars
+- Malaysians comparing Toyota model categories, promotions and instalment options
 - Users who prefer direct contact with a sales advisor via WhatsApp
-- Mobile-first traffic from social media, messaging, and ads
+- Mobile-first traffic from social media, messaging and ads
 
 ## Primary conversion action
 1. WhatsApp Lim directly
@@ -26,15 +26,15 @@ Primary goal: generate qualified leads via WhatsApp inquiries.
 The website should make Lim feel:
 - trustworthy
 - responsive
-- knowledgeable
+- knowledgeable across Toyota model options
 - easy to contact
 
 ## Must-have content
 - Hero section with strong WhatsApp CTA
 - Intro of Lim
 - Why buy through Lim
-- Vios spotlight section
-- Promotion / installment highlights
+- Toyota model category section
+- Promotion / instalment highlights
 - Loan assistance summary
 - Testimonials / trust indicators
 - FAQ
@@ -46,7 +46,7 @@ The website should make Lim feel:
 - No user login
 - No dynamic stock sync
 - Promotions and model content can be updated manually
-- Focus on Vios first; more models can be added later
+- Focus on model categories first; individual model pages can be added later
 - Static frontend only
 
 ## Technical direction
@@ -64,6 +64,6 @@ The website should make Lim feel:
 ## Success criteria
 - Clear credibility above the fold
 - One-tap WhatsApp contact
-- Enough Vios / financing info to trigger inquiries
+- Enough model category / financing info to trigger inquiries
 - Looks polished on mobile
-- Easy to expand into more model pages later
+- Easy to expand into individual model pages later

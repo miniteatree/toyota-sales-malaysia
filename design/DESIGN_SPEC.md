@@ -1,7 +1,18 @@
-# Design Spec — Toyota Vios Penang Landing Page
+# Design Spec — Toyota Models Penang Landing Page
 
 ## Visual direction
-Modern, trustworthy automotive landing page for Lim, a Toyota sales advisor in Penang. The page is mobile-first, direct, and conversion-focused with repeated WhatsApp calls-to-action.
+Modern, trustworthy automotive landing page for Lim, a Toyota sales advisor in Penang. The page is now model-lineup focused rather than Vios-only, helping customers choose by Toyota category and enquire through WhatsApp.
+
+## Model content direction
+Use current Toyota Malaysia categories and examples:
+- Sedan: Vios, Corolla, Camry
+- SUV / Crossover: Yaris Cross, Corolla Cross, Harrier, Fortuner
+- MPV: Veloz, Innova Zenix, Alphard, Vellfire
+- Pickup / Van: Hilux, Hiace
+- Hybrid / EV: Toyota Hybrid Electric and Battery Electric options
+- Performance: GR models
+
+Final public copy should be checked against Toyota Malaysia’s latest official model list before launch.
 
 ## Palette
 - Toyota red: `#d71920`
@@ -25,17 +36,17 @@ System sans-serif stack using Inter-compatible metrics. Headings use tight line-
 - Single-page responsive layout
 - Mobile: one-column vertical flow
 - Tablet/desktop: two-column hero, advisor, finance, and location sections
-- Feature cards use 1 column on mobile, 3 columns on desktop
+- Model cards use 1 column on mobile, 3 columns on desktop
 - Trust strip uses 2 columns on mobile, 4 columns on desktop
 
 ## Reusable components
 - Sticky translucent header
 - Brand mark
 - Pill CTA buttons
-- Hero card with car placeholder visual
+- Hero card with Toyota placeholder visual
 - Trust strip items
 - White rounded panels
-- Feature cards
+- Model category cards
 - Step list
 - FAQ details blocks
 - Sticky WhatsApp CTA
@@ -49,8 +60,8 @@ System sans-serif stack using Inter-compatible metrics. Headings use tight line-
 ## Content / asset checklist before launch
 - Replace placeholder WhatsApp number `60000000000`
 - Add Lim’s actual dealership / branch name and address
-- Add official or approved Toyota Vios imagery
+- Add official or approved Toyota model imagery
 - Add Lim’s profile photo if available
 - Replace placeholder testimonials with real customer proof
-- Confirm current promotion wording with official campaign terms
+- Confirm current model availability, promotion wording and financing details
 - Confirm disclaimer wording if dealership has required legal copy

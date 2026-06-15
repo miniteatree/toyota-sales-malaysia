@@ -128,8 +128,12 @@ h3 { font-size: 22px; letter-spacing: -.025em; }
 
 .section-heading { max-width: 760px; margin-bottom: 28px; }
 .section-heading p:not(.eyebrow), .finance p, .location p { color: var(--muted); font-size: 18px; }
-.feature-grid, .quote-grid { display: grid; gap: 18px; }
-.feature-card { padding: 26px; }
+.feature-grid, .model-grid, .quote-grid { display: grid; gap: 18px; }
+.feature-card, .model-card { padding: 26px; }
+.model-card { background: var(--white); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: 0 10px 35px rgba(16,19,26,.06); display: flex; flex-direction: column; gap: 12px; }
+.model-card span { color: var(--red); font-weight: 900; text-transform: uppercase; letter-spacing: .12em; font-size: 12px; }
+.model-card p { color: var(--muted); margin: 0; }
+.model-card a { color: var(--red); font-weight: 900; margin-top: auto; }
 .feature-card span { color: var(--red); font-weight: 900; }
 .feature-card p, blockquote cite, details p { color: var(--muted); }
 .steps { display: grid; gap: 12px; }
@@ -154,7 +158,7 @@ summary { cursor: pointer; font-weight: 850; }
   .hero, .two-col, .finance, .location { grid-template-columns: 1.1fr .9fr; }
   .hero-actions { flex-direction: row; align-items: center; }
   .trust-strip { grid-template-columns: repeat(4, 1fr); margin-inline: auto; }
-  .feature-grid, .quote-grid { grid-template-columns: repeat(3, 1fr); }
+  .feature-grid, .model-grid, .quote-grid { grid-template-columns: repeat(3, 1fr); }
   .quote-grid { grid-template-columns: repeat(2, 1fr); }
   .sticky-whatsapp { left: auto; right: 24px; width: auto; padding: 0 28px; }
 }
