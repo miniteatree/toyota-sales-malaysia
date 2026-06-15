@@ -57,10 +57,29 @@ System sans-serif stack using Inter-compatible metrics. Headings use tight line-
 - Sticky WhatsApp CTA spans full width on mobile and becomes a compact floating pill on desktop
 - Hero and content grids collapse to a single column below 760px
 
+## Local image assets
+Official Toyota Malaysia model images have been saved under `design/assets/cars/` and are referenced locally by the landing page.
+
+Current local files:
+- `vios.png`
+- `corolla.png`
+- `camry.png`
+- `yaris-cross.png`
+- `corolla-cross.png`
+- `harrier.png`
+- `fortuner.png`
+- `veloz.png`
+- `innova-zenix.png`
+- `alphard.png`
+- `hilux.png`
+- `hiace.png`
+- `bz4x.png`
+- `gr-yaris.png`
+
 ## Content / asset checklist before launch
 - Replace placeholder WhatsApp number `60000000000`
 - Add Lim’s actual dealership / branch name and address
-- Add official or approved Toyota model imagery
+- Confirm these official/approved Toyota model images are acceptable for the sales rep site
 - Add Lim’s profile photo if available
 - Replace placeholder testimonials with real customer proof
 - Confirm current model availability, promotion wording and financing details

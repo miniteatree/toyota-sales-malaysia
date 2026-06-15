@@ -78,18 +78,21 @@ h3 { font-size: 22px; letter-spacing: -.025em; }
   box-shadow: var(--shadow);
   padding: 28px;
 }
-.car-visual {
+.hero-collage {
   position: absolute;
-  inset: auto 22px 96px;
-  height: 135px;
-  border-radius: 80px 80px 34px 34px;
-  background: linear-gradient(135deg, #fafafa, #cdd2da);
-  display: grid; place-items: center;
-  font-size: clamp(40px, 8vw, 82px);
-  font-weight: 950;
-  color: rgba(16,19,26,.18);
-  letter-spacing: -.08em;
+  inset: 26px 20px 112px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 8px;
 }
+.hero-collage img {
+  width: 100%;
+  max-height: 82px;
+  object-fit: contain;
+  filter: drop-shadow(0 18px 24px rgba(0,0,0,.32));
+}
+.hero-collage img:nth-child(2) { transform: translateX(18px); }
+.hero-collage img:nth-child(3) { transform: translateX(-14px); }
 .price-card {
   position: absolute; left: 24px; right: 24px; bottom: 24px;
   padding: 20px;
@@ -130,7 +133,8 @@ h3 { font-size: 22px; letter-spacing: -.025em; }
 .section-heading p:not(.eyebrow), .finance p, .location p { color: var(--muted); font-size: 18px; }
 .feature-grid, .model-grid, .quote-grid { display: grid; gap: 18px; }
 .feature-card, .model-card { padding: 26px; }
-.model-card { background: var(--white); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: 0 10px 35px rgba(16,19,26,.06); display: flex; flex-direction: column; gap: 12px; }
+.model-card { background: var(--white); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: 0 10px 35px rgba(16,19,26,.06); display: flex; flex-direction: column; gap: 12px; overflow: hidden; }
+.model-card img { width: calc(100% + 52px); height: 142px; margin: -12px -26px 4px; padding: 18px 22px 8px; object-fit: contain; background: linear-gradient(180deg, #f9fafc, #eef1f6); }
 .model-card span { color: var(--red); font-weight: 900; text-transform: uppercase; letter-spacing: .12em; font-size: 12px; }
 .model-card p { color: var(--muted); margin: 0; }
 .model-card a { color: var(--red); font-weight: 900; margin-top: auto; }
