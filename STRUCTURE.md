@@ -1,131 +1,127 @@
 # Structure — Toyota Sales Representative Website (Malaysia)
 
-## Recommended v1 site structure
-Phase 1 recommendation:
-- 1 main landing page
-- Vios-first positioning
-- Architecture can expand later into model detail pages and promo pages
+## Current phase goal
+Refine the existing single-page landing page into a stronger conversion-focused Toyota sales advisor website for Malaysia users.
 
-## Routes
-### Phase 1
+## Route plan
+### Current
 - `/` — main landing page
 
-### Phase 2 expansion
-- `/models/vios`
-- `/promotions`
-- `/about`
-- `/contact`
+### Future-friendly expansion
+- `/models/<model-slug>` — individual model pages later
+- `/promotions` — manual promo page later
+- `/about` — advisor profile page later
+- `/contact` — location / contact page later
 
-## Landing page sections
+## Recommended landing page structure (next pass)
 1. **Hero**
-   - headline focused on Toyota Vios in Penang
-   - short trust-building subtext
-   - primary CTA: WhatsApp Lim
-   - hero image or featured Vios visual
+   - clear Toyota Penang positioning
+   - one-sentence value proposition
+   - strong WhatsApp CTA
+   - supporting trust note
+   - hero visual using featured Toyota model or grouped lineup
 
-2. **Quick trust bar**
-   - Penang service area
-   - fast response promise
-   - financing help
-   - easy booking / inquiry support
+2. **Trust strip**
+   - Penang support
+   - quotation help
+   - financing guidance
+   - test drive / booking assistance
 
 3. **About Lim**
-   - profile photo
-   - short intro
-   - why customers should buy through Lim
+   - advisor introduction
+   - what Lim helps with
+   - why buyers contact Lim instead of waiting
 
-4. **Toyota Vios spotlight**
-   - main Vios image
-   - key selling points
-   - variant / family-fit / daily-use positioning
-   - CTA to ask for latest package via WhatsApp
+4. **Model browsing section**
+   - grouped or card-based current Toyota lineup
+   - easy scan by category
+   - direct WhatsApp CTA per model or category
 
-5. **Promotions / financing highlights**
-   - current promo summary
-   - installment examples
-   - downpayment highlights
-   - CTA to request latest quotation
+5. **How the enquiry works**
+   - WhatsApp → needs / model discussion → quotation / financing guidance → booking / test drive
+   - reduce user uncertainty
 
-6. **How Lim helps**
-   - quotation support
-   - loan application guidance
-   - trade-in assistance mention
-   - test drive arrangement
+6. **Why buy through Lim**
+   - faster response
+   - clearer guidance
+   - local support
+   - smoother follow-up
 
-7. **Why choose Lim**
-   - transparent process
-   - quick follow-up
-   - local Penang support
-   - after-sales care
+7. **Finance / quotation support**
+   - explain what user can ask for
+   - avoid fake exact promo data unless provided
+   - keep wording flexible and accurate
 
-8. **Testimonials / social proof**
-   - customer quotes
-   - delivery or trust badge area if assets exist
+8. **Social proof / trust section**
+   - testimonial cards, delivery photos, or proof placeholders
+   - if placeholders remain, structure should still feel honest and not overclaim
 
 9. **FAQ**
-   - booking process
-   - loan approval timing
-   - trade-in support
-   - Penang / outstation delivery questions
+   - model comparison
+   - loan / documentation guidance
+   - test drive
+   - trade-in / booking
+   - Penang coverage
 
 10. **Location / coverage**
+   - branch / dealership area
    - Penang service coverage
-   - dealership / branch area
-   - map or location CTA
+   - optional map CTA
 
-11. **Final CTA block**
-   - WhatsApp Lim now
-   - concise reassurance text
+11. **Final CTA**
+   - short reassurance copy
+   - WhatsApp button with strongest intent
 
 12. **Footer**
-   - quick anchors
-   - contact note
    - disclaimer
+   - quick anchors
+   - lightweight contact / attribution info
 
 ## UX goals
-- Users understand within 5 seconds this is for Toyota Vios inquiries in Penang
-- WhatsApp path is always visible
-- Mobile-first CTA prominence
-- Scroll flow: trust → Vios → financing → advisor credibility → contact
+- Users understand immediately that this is a Toyota advisor site for Penang enquiries
+- WhatsApp CTA is visible at all important moments
+- Model exploration feels simple, not cluttered
+- Trust improves despite limited real-world assets
+- Mobile users can act quickly without scrolling confusion
 
-## Data model (static content)
+## Content/data model (static for now)
 - Sales rep profile
-  - name: Lim
-  - area: Penang
+  - name
+  - role/title
   - phone / WhatsApp number
+  - branch / dealership
+  - service area
   - profile image
-  - dealership / branch details
 
-- Featured model
-  - Toyota Vios
-  - image
+- Model items[]
+  - name
+  - category
   - short description
-  - price / installment placeholders
-  - CTA link
+  - image
+  - WhatsApp CTA text
+  - WhatsApp prefilled message
 
-- Promotions[]
-  - title
-  - summary
-  - validity note
-  - CTA link
-
-- Testimonials[]
-  - customer name
-  - quote
-  - city
-  - image (optional)
+- Trust items[]
+  - short title
+  - short description
 
 - FAQ[]
   - question
   - answer
 
-## SEO direction
-For phase 1:
-- target local-intent keywords around Toyota Vios Penang / Toyota salesperson Penang / Toyota Vios promotion Penang
-- semantic headings
-- FAQ structure for rich-result potential
-- later add Vios detail and promotion pages if SEO becomes a serious channel
+- Social proof items[]
+  - quote or caption
+  - customer name / area
+  - image optional
 
-## Recommendation
-Start with this single landing page first.
-Do not split into multiple pages until promotions and content depth justify it.
+## Implementation notes for development phase
+- Keep static HTML/CSS/JS unless a clear reason appears to add tooling
+- Preserve GitHub Pages compatibility
+- Centralize WhatsApp number/message generation if possible to avoid placeholder misses
+- Prefer sections/components that can later map cleanly to reusable partials or a simple data file
+
+## Key content blockers before final public launch
+- Real WhatsApp number
+- Real branch / dealership details
+- Real testimonials / proof assets
+- Confirmed brand-safe image usage

@@ -1,0 +1,931 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Toyota Cars Penang | Lim Toyota Sales Advisor</title>
+  <meta name="description" content="Speak with Lim, a Toyota sales advisor in Penang. Get the latest Toyota Malaysia model packages, financing guidance, test drive support and quotation through WhatsApp." />
+  <style>
+    :root {
+      --red: #d71920;
+      --red-dark: #9f1016;
+      --ink: #10131a;
+      --muted: #5d6675;
+      --line: #e6e8ee;
+      --soft: #f6f7f9;
+      --white: #ffffff;
+      --wa-green: #20b15a;
+      --radius: 24px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 12% 0%, rgba(215,25,32,.08), transparent 28%),
+        linear-gradient(180deg, #fff 0%, #f5f6f9 42%, #eef1f6 100%);
+      line-height: 1.6;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    /* ── Skip link ── */
+    .skip-link {
+      position: absolute;
+      left: -9999px;
+      top: auto;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+    }
+    .skip-link:focus {
+      position: fixed;
+      left: 16px;
+      top: 16px;
+      width: auto;
+      height: auto;
+      z-index: 100;
+      padding: 12px 20px;
+      background: var(--ink);
+      color: var(--white);
+      border-radius: 999px;
+      font-weight: 700;
+      overflow: visible;
+    }
+
+    /* ── Focus ── */
+    :focus-visible { outline: 2px solid var(--red); outline-offset: 2px; }
+
+    /* ── Header ── */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      padding: 14px clamp(18px, 5vw, 64px);
+      background: rgba(255,255,255,.88);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--line);
+    }
+    .brand { display: flex; align-items: center; gap: 10px; }
+    .brand-mark {
+      display: grid;
+      place-items: center;
+      width: 42px;
+      height: 42px;
+      border-radius: 14px;
+      color: #fff;
+      background: var(--red);
+      font-weight: 800;
+      flex-shrink: 0;
+    }
+    .brand small { display: block; color: var(--muted); font-size: 12px; margin-top: -3px; }
+    nav { display: none; gap: 22px; color: var(--muted); font-weight: 700; font-size: 14px; }
+    nav a:hover { color: var(--red); }
+
+    /* ── Section layout ── */
+    .section {
+      padding: clamp(54px, 8vw, 110px) clamp(18px, 5vw, 64px);
+      max-width: 1180px;
+      margin: 0 auto;
+    }
+
+    /* ── Typography ── */
+    .eyebrow {
+      color: var(--red);
+      text-transform: uppercase;
+      letter-spacing: .16em;
+      font-size: 12px;
+      font-weight: 850;
+      margin: 0 0 14px;
+    }
+    h1, h2, h3 { line-height: 1.05; margin: 0; }
+    h1 { font-size: clamp(38px, 8vw, 78px); letter-spacing: -.055em; max-width: 760px; }
+    h2 { font-size: clamp(29px, 5vw, 52px); letter-spacing: -.04em; }
+    h3 { font-size: 22px; letter-spacing: -.025em; }
+    .lead { color: var(--muted); font-size: clamp(18px, 2vw, 22px); max-width: 650px; margin: 22px 0 0; }
+
+    /* ── Buttons ── */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      min-height: 50px;
+      padding: 0 22px;
+      border-radius: 999px;
+      background: var(--ink);
+      color: var(--white);
+      font-weight: 850;
+      font-size: 15px;
+      box-shadow: 0 12px 30px rgba(16,19,26,.15);
+      transition: transform .15s;
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    .btn-primary { background: var(--red); box-shadow: 0 12px 30px rgba(215,25,32,.25); }
+    .btn:hover { transform: translateY(-1px); }
+    .btn-small { min-height: 42px; padding-inline: 16px; font-size: 14px; }
+
+    /* ── Hero ── */
+    .hero { display: grid; gap: 34px; align-items: center; padding-top: 42px; }
+    .hero-actions { display: flex; flex-direction: column; gap: 12px; margin-top: 30px; align-items: flex-start; }
+    .response-note { color: var(--muted); font-size: 13px; }
+
+    .hero-card {
+      position: relative;
+      min-height: 390px;
+      border-radius: 34px;
+      background:
+        radial-gradient(circle at 18% 12%, rgba(255,255,255,.22) 0 16%, transparent 17%),
+        radial-gradient(circle at 88% 0%, rgba(215,25,32,.32), transparent 34%),
+        linear-gradient(145deg, #202633, #080a0f 72%);
+      overflow: hidden;
+      box-shadow: 0 24px 70px rgba(16,19,26,.12);
+      padding: 28px;
+    }
+    .hero-showcase {
+      position: absolute;
+      inset: 22px 20px 126px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      border-radius: 26px;
+      background:
+        radial-gradient(ellipse at 50% 78%, rgba(255,255,255,.16), transparent 45%),
+        linear-gradient(180deg, rgba(255,255,255,.10), rgba(255,255,255,.03));
+      border: 1px solid rgba(255,255,255,.12);
+    }
+    .showcase-label {
+      margin: 0;
+      color: rgba(255,255,255,.78);
+      font-size: 12px;
+      font-weight: 850;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+    }
+    .hero-showcase img {
+      width: min(92%, 420px);
+      max-height: 154px;
+      object-fit: contain;
+      filter: drop-shadow(0 24px 26px rgba(0,0,0,.38));
+    }
+    .showcase-tags { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; }
+    .showcase-tags span {
+      padding: 6px 10px;
+      border-radius: 999px;
+      color: rgba(255,255,255,.88);
+      background: rgba(255,255,255,.10);
+      border: 1px solid rgba(255,255,255,.12);
+      font-size: 12px;
+      font-weight: 800;
+    }
+    .price-card {
+      position: absolute;
+      left: 24px; right: 24px; bottom: 24px;
+      padding: 20px;
+      border-radius: 22px;
+      background: rgba(255,255,255,.94);
+    }
+    .price-card span, .price-card small { color: var(--muted); display: block; }
+    .price-card strong { display: block; font-size: 26px; }
+
+    /* ── Trust strip ── */
+    .trust-strip {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1px;
+      margin: 0 clamp(18px, 5vw, 64px);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      overflow: hidden;
+      background: var(--line);
+      max-width: 1180px;
+    }
+    .trust-strip > div { background: var(--white); padding: 20px; }
+    .trust-icon { color: var(--red); display: block; margin-bottom: 8px; }
+    .trust-strip strong, .trust-strip span { display: block; }
+    .trust-strip span { color: var(--muted); font-size: 14px; }
+
+    /* ── About ── */
+    .two-col { display: grid; gap: 28px; align-items: start; }
+
+    .about-intro { display: flex; flex-direction: column; gap: 20px; }
+    .advisor-avatar {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: var(--soft);
+      border: 2px solid var(--line);
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .panel {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: 0 10px 35px rgba(16,19,26,.06);
+      padding: clamp(24px, 4vw, 38px);
+    }
+    .check-list { padding: 0; margin: 22px 0 0; list-style: none; }
+    .check-list li { margin: 10px 0; padding-left: 28px; position: relative; }
+    .check-list li::before { content: "✓"; position: absolute; left: 0; color: var(--red); font-weight: 900; }
+
+    /* ── Section heading ── */
+    .section-heading { max-width: 760px; margin-bottom: 28px; }
+    .section-heading p:not(.eyebrow) { color: var(--muted); font-size: 18px; margin: 14px 0 0; }
+
+    /* ── Model filter ── */
+    .model-filter {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 24px;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+    .filter-btn {
+      flex-shrink: 0;
+      padding: 8px 18px;
+      border-radius: 999px;
+      background: var(--soft);
+      color: var(--ink);
+      font-weight: 700;
+      font-size: 14px;
+      border: 1px solid var(--line);
+      cursor: pointer;
+      transition: background .12s, color .12s, border-color .12s;
+    }
+    .filter-btn:hover { background: var(--line); }
+    .filter-btn[aria-selected="true"] {
+      background: var(--red);
+      color: var(--white);
+      border-color: var(--red);
+    }
+
+    /* ── Model grid ── */
+    .model-grid { display: grid; gap: 18px; }
+    .model-card {
+      position: relative;
+      background: rgba(255,255,255,.94);
+      border: 1px solid rgba(230,232,238,.95);
+      border-radius: 28px;
+      box-shadow: 0 14px 42px rgba(16,19,26,.075);
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      overflow: hidden;
+      padding: 26px;
+    }
+    .model-card[hidden] { display: none; }
+    .model-card::before {
+      content: "";
+      position: absolute;
+      inset: 0 0 auto;
+      height: 168px;
+      background:
+        radial-gradient(ellipse at 50% 82%, rgba(16,19,26,.14), transparent 44%),
+        linear-gradient(145deg, #ffffff 0%, #f0f2f6 48%, #e3e7ef 100%);
+      pointer-events: none;
+    }
+    .model-card img {
+      position: relative;
+      z-index: 1;
+      width: calc(100% + 32px);
+      height: 154px;
+      margin: -6px -16px 8px;
+      padding: 14px 12px 10px;
+      object-fit: contain;
+      filter: drop-shadow(0 16px 16px rgba(16,19,26,.18));
+    }
+    .model-badge {
+      color: var(--red);
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: .12em;
+      font-size: 12px;
+    }
+    .model-card p { color: var(--muted); margin: 0; }
+    .model-card-cta {
+      color: var(--red);
+      font-weight: 900;
+      margin-top: auto;
+      display: inline-block;
+      padding: 10px 0;
+    }
+    .model-card-cta:hover { text-decoration: underline; }
+
+    /* ── Why Lim ── */
+    .why-grid { display: grid; gap: 18px; }
+    .why-card {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: 0 10px 35px rgba(16,19,26,.06);
+      padding: 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .why-icon {
+      width: 46px;
+      height: 46px;
+      border-radius: 14px;
+      background: rgba(215,25,32,.08);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--red);
+      flex-shrink: 0;
+    }
+    .why-card h3 { font-size: 19px; }
+    .why-card p { color: var(--muted); margin: 0; font-size: 15px; line-height: 1.55; }
+
+    /* ── Finance / steps ── */
+    .finance { display: grid; gap: 28px; align-items: start; }
+    .finance-copy p { color: var(--muted); font-size: 18px; margin: 14px 0 0; }
+    .steps { display: grid; gap: 12px; }
+    .step-row {
+      display: flex;
+      gap: 14px;
+      align-items: center;
+      padding: 16px;
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+    }
+    .step-num {
+      display: grid;
+      place-items: center;
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background: var(--red);
+      color: #fff;
+      font-weight: 900;
+      flex-shrink: 0;
+    }
+    .steps-cta { margin-top: 20px; }
+
+    /* ── FAQ ── */
+    .faq-list { display: flex; flex-direction: column; gap: 12px; }
+    details {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: 0 10px 35px rgba(16,19,26,.06);
+      padding: 20px 24px;
+    }
+    summary { cursor: pointer; font-weight: 850; }
+    details p { color: var(--muted); margin: 14px 0 0; }
+
+    /* ── Location ── */
+    .location { display: grid; gap: 28px; align-items: start; }
+    .location-copy p { color: var(--muted); font-size: 18px; margin: 14px 0 0; }
+    .location-card {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: 0 10px 35px rgba(16,19,26,.06);
+      padding: 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+    .placeholder-label {
+      display: inline-block;
+      background: rgba(215,25,32,.08);
+      color: var(--red);
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: .12em;
+      padding: 3px 8px;
+      border-radius: 6px;
+    }
+    .location-detail strong { display: block; margin-bottom: 2px; }
+    .location-detail p { color: var(--muted); margin: 0; font-size: 15px; }
+
+    /* ── Final CTA ── */
+    .final-cta-wrap {
+      padding: 0 clamp(18px, 5vw, 64px) clamp(54px, 8vw, 110px);
+      max-width: 1180px;
+      margin: 0 auto;
+    }
+    .final-cta {
+      text-align: center;
+      background: var(--ink);
+      border-radius: 34px;
+      padding: clamp(48px, 7vw, 90px) clamp(24px, 6vw, 80px);
+    }
+    .final-cta .eyebrow { color: rgba(255,255,255,.45); }
+    .final-cta h2 { color: var(--white); max-width: 580px; margin: 0 auto 16px; }
+    .final-cta p { color: rgba(255,255,255,.55); font-size: 18px; max-width: 460px; margin: 0 auto 32px; }
+    .final-cta .btn-primary {
+      font-size: 16px;
+      min-height: 56px;
+      padding: 0 34px;
+      box-shadow: 0 18px 42px rgba(215,25,32,.35);
+    }
+
+    /* ── Footer ── */
+    .site-footer {
+      padding: 36px clamp(18px, 5vw, 64px) 96px;
+      color: var(--muted);
+      font-size: 14px;
+      border-top: 1px solid var(--line);
+    }
+    .footer-nav {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+      margin-bottom: 16px;
+    }
+    .footer-nav a:hover { color: var(--ink); }
+
+    /* ── Sticky WhatsApp ── */
+    .sticky-whatsapp {
+      position: fixed;
+      z-index: 30;
+      left: 18px; right: 18px; bottom: 18px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 9px;
+      min-height: 56px;
+      border-radius: 999px;
+      background: var(--wa-green);
+      color: white;
+      font-weight: 900;
+      font-size: 16px;
+      box-shadow: 0 18px 42px rgba(32,177,90,.35);
+      text-decoration: none;
+      transition: transform .15s;
+    }
+    .sticky-whatsapp:hover { transform: translateY(-1px); }
+
+    /* ── Responsive: ≥760px ── */
+    @media (min-width: 760px) {
+      nav { display: flex; }
+      .hero { grid-template-columns: 1.1fr .9fr; }
+      .hero-actions { flex-direction: row; align-items: center; }
+      .trust-strip { grid-template-columns: repeat(4, 1fr); margin-inline: auto; }
+      .two-col { grid-template-columns: 1.1fr .9fr; }
+      .model-grid { grid-template-columns: repeat(3, 1fr); }
+      .why-grid { grid-template-columns: repeat(2, 1fr); }
+      .finance { grid-template-columns: 1.1fr .9fr; }
+      .location { grid-template-columns: 1.1fr .9fr; }
+      .sticky-whatsapp { left: auto; right: 24px; width: auto; padding: 0 28px; }
+    }
+
+    /* ── Responsive: ≤759px ── */
+    @media (max-width: 759px) {
+      .site-header { padding: 12px 16px; gap: 12px; }
+      .brand-mark { width: 38px; height: 38px; border-radius: 13px; }
+      .section { padding-inline: 16px; }
+      .hero { padding-top: 30px; gap: 26px; }
+      h1 { font-size: clamp(36px, 11.5vw, 48px); }
+      h2 { font-size: clamp(28px, 8.5vw, 38px); }
+      .lead { font-size: 17px; margin-top: 16px; }
+      .btn { width: 100%; min-height: 52px; }
+      .hero-card { min-height: 330px; border-radius: 28px; }
+      .hero-showcase { inset: 16px 14px 112px; border-radius: 22px; gap: 8px; }
+      .hero-showcase img { max-height: 124px; width: 96%; }
+      .showcase-label { font-size: 10px; }
+      .showcase-tags { gap: 6px; }
+      .showcase-tags span { padding: 5px 8px; font-size: 11px; }
+      .price-card { left: 16px; right: 16px; bottom: 16px; padding: 18px; }
+      .price-card strong { font-size: 23px; }
+      .trust-strip { grid-template-columns: 1fr 1fr; margin-inline: 16px; border-radius: 20px; }
+      .trust-strip > div { padding: 16px 14px; }
+      .trust-strip strong { font-size: 14px; }
+      .trust-strip span { font-size: 12px; }
+      .model-grid { gap: 14px; }
+      .model-card { border-radius: 22px; padding: 18px; gap: 9px; }
+      .model-card::before { height: 138px; }
+      .model-card img { width: calc(100% + 20px); height: 124px; margin: -4px -10px 8px; padding: 10px 6px 8px; }
+      .model-card h3 { font-size: 21px; }
+      .model-card p { font-size: 14.5px; line-height: 1.5; }
+      .site-footer { padding-bottom: 104px; }
+      .final-cta-wrap { padding-inline: 16px; }
+      .final-cta { border-radius: 28px; }
+    }
+
+    @media (min-width: 500px) and (max-width: 759px) {
+      .model-grid { grid-template-columns: repeat(2, 1fr); }
+      .why-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 520px) {
+      .site-header .btn-small { display: none; }
+      .brand small { display: none; }
+      .brand strong { font-size: 15px; }
+      .hero-card { min-height: 310px; }
+    }
+
+    @media (max-width: 380px) {
+      .trust-strip { grid-template-columns: 1fr; }
+      .hero-showcase img { max-height: 106px; }
+      .showcase-tags span { font-size: 10px; padding-inline: 7px; }
+      .model-card img { height: 112px; }
+    }
+  </style>
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<header class="site-header">
+  <a class="brand" href="#top" aria-label="Toyota Sales Advisor Penang — Lim">
+    <span class="brand-mark" aria-hidden="true">L</span>
+    <span><strong>Lim</strong><small>Toyota Sales Advisor · Penang</small></span>
+  </a>
+  <nav aria-label="Main navigation">
+    <a href="#models">Models</a>
+    <a href="#why-lim">Why Lim</a>
+    <a href="#finance">Finance</a>
+    <a href="#faq">FAQ</a>
+  </nav>
+  <a class="btn btn-small" data-wa="Hi Lim, I am interested in Toyota cars in Penang" href="#" target="_blank" rel="noopener">WhatsApp Lim</a>
+</header>
+
+<main id="main">
+
+  <!-- ── HERO ── -->
+  <section class="hero section" id="top" aria-labelledby="hero-heading">
+    <div class="hero-copy">
+      <p class="eyebrow">Toyota model enquiries · Penang</p>
+      <h1 id="hero-heading">Get clear Toyota guidance from a Penang advisor.</h1>
+      <p class="lead">Ask Lim for the latest model packages, financing estimates, booking steps and test drive support — all through WhatsApp.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" data-wa="Hi Lim, please send me the latest Toyota model packages in Penang" href="#" target="_blank" rel="noopener">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.124.555 4.118 1.524 5.847L.057 23.486a.5.5 0 0 0 .614.614l5.639-1.467A11.952 11.952 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.907 0-3.693-.504-5.23-1.385l-.374-.222-3.893 1.012 1.012-3.893-.222-.374A9.953 9.953 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+          Ask for latest Toyota package
+        </a>
+        <span class="response-note">Usually replies within the hour</span>
+      </div>
+    </div>
+    <div class="hero-card" aria-label="Toyota model showcase">
+      <div class="hero-showcase" aria-hidden="true">
+        <p class="showcase-label">Popular Toyota models</p>
+        <img src="../design/assets/cars/corolla-cross.png" alt="">
+        <div class="showcase-tags">
+          <span>Sedan</span><span>SUV</span><span>MPV</span><span>Pickup</span><span>EV</span>
+        </div>
+      </div>
+      <div class="price-card">
+        <span>Latest model packages</span>
+        <strong>Request quotation</strong>
+        <small>Prices and promotions depend on model, campaign and bank approval.</small>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── TRUST STRIP ── -->
+  <div class="trust-strip" role="list" aria-label="Key service highlights">
+    <div role="listitem">
+      <svg class="trust-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+      <strong>Penang focused</strong><span>Local sales support</span>
+    </div>
+    <div role="listitem">
+      <svg class="trust-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+      <strong>WhatsApp first</strong><span>Fast, simple enquiry</span>
+    </div>
+    <div role="listitem">
+      <svg class="trust-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
+      <strong>Model guidance</strong><span>Compare suitable options</span>
+    </div>
+    <div role="listitem">
+      <svg class="trust-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+      <strong>Test drive</strong><span>Arrangement assistance</span>
+    </div>
+  </div>
+
+  <!-- ── ABOUT LIM ── -->
+  <section id="about" class="two-col section" aria-labelledby="about-heading">
+    <div class="about-intro">
+      <div class="advisor-avatar" aria-label="Lim, Toyota Sales Advisor Penang — photo placeholder">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="color: var(--muted)"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+      </div>
+      <div>
+        <p class="eyebrow">Meet your advisor</p>
+        <h2 id="about-heading">Hi, I'm Lim — here to make choosing your Toyota easier.</h2>
+      </div>
+    </div>
+    <div class="panel">
+      <p>Whether you are comparing a sedan, SUV, MPV, pickup or hybrid option, I help Penang customers understand suitable Toyota models, current packages, loan preparation and the next step — all through WhatsApp.</p>
+      <ul class="check-list">
+        <li>Latest Toyota model quotation and package enquiry</li>
+        <li>Promotion, booking and loan process guidance</li>
+        <li>Penang-area support and responsive follow-up</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ── MODEL GRID ── -->
+  <section id="models" class="section" aria-labelledby="models-heading">
+    <div class="section-heading">
+      <p class="eyebrow">Toyota Malaysia models</p>
+      <h2 id="models-heading">Browse current Toyota model categories.</h2>
+      <p>Start with the category that fits your need. Lim can help you check the latest package, availability and next step.</p>
+    </div>
+
+    <div class="model-filter" role="tablist" aria-label="Filter models by category">
+      <button class="filter-btn" role="tab" aria-selected="true" data-filter="all">All</button>
+      <button class="filter-btn" role="tab" aria-selected="false" data-filter="sedan">Sedan</button>
+      <button class="filter-btn" role="tab" aria-selected="false" data-filter="suv">SUV</button>
+      <button class="filter-btn" role="tab" aria-selected="false" data-filter="mpv">MPV</button>
+      <button class="filter-btn" role="tab" aria-selected="false" data-filter="pickup">Pickup</button>
+      <button class="filter-btn" role="tab" aria-selected="false" data-filter="ev">EV</button>
+    </div>
+
+    <div class="model-grid">
+      <article class="model-card" data-category="sedan">
+        <img src="../design/assets/cars/vios.jpg" alt="Toyota Vios" loading="lazy" />
+        <span class="model-badge">Sedan</span>
+        <h3>Vios</h3>
+        <p>Practical daily sedan for city driving and family use.</p>
+        <a class="model-card-cta" data-wa="Hi Lim, I am interested in Toyota Vios" href="#" target="_blank" rel="noopener">Ask Vios package →</a>
+      </article>
+      <article class="model-card" data-category="sedan">
+        <img src="../design/assets/cars/corolla.png" alt="Toyota Corolla" loading="lazy" />
+        <span class="model-badge">Sedan</span>
+        <h3>Corolla</h3>
+        <p>Comfort-focused sedan with a more refined driving feel.</p>
+        <a class="model-card-cta" data-wa="Hi Lim, I am interested in Toyota Corolla" href="#" target="_blank" rel="noopener">Ask Corolla package →</a>
+      </article>
+      <article class="model-card" data-category="sedan">
+        <img src="../design/assets/cars/camry.png" alt="Toyota Camry" loading="lazy" />
+        <span class="model-badge">Sedan</span>
+        <h3>Camry</h3>
+        <p>Executive sedan option for comfort and premium presence.</p>
+        <a class="model-card-cta" data-wa="Hi Lim, I am interested in Toyota Camry" href="#" target="_blank" rel="noopener">Ask Camry package →</a>
+      </article>
+      <article class="model-card" data-category="suv">
+        <img src="../design/assets/cars/yaris-cross.png" alt="Toyota Yaris Cross" loading="lazy" />
+        <span class="model-badge">SUV / Crossover</span>
+        <h3>Yaris Cross</h3>
+        <p>Compact SUV choice for customers who want higher seating.</p>
+        <a class="model-card-cta" data-wa="Hi Lim, I am interested in Toyota Yaris Cross" href="#" target="_blank" rel="noopener">Ask Yaris Cross package →</a>
+      </article>
+      <article class="model-card" data-category="suv">
+        <img src="../design/assets/cars/corolla-cross.png" alt="Toyota Corolla Cross" loading="lazy" />
+        <span class="model-badge">SUV / Crossover</span>
+        <h3>Corolla Cross</h3>
+        <p>Popular crossover for family flexibility and everyday comfort.</p>
+        <a class="model-card-cta" data-wa="Hi Lim, I am interested in Toyota Corolla Cross" href="#" target="_blank" rel="noopener">Ask Corolla Cross package →</a>
+      </article>
+      <article class="model-card" data-category="suv">
+        <img src="../design/assets/cars/harrier.png" alt="Toyota Harrier" loading="lazy" />
+        <span class="model-badge">SUV</span>
+        <h3>Harrier</h3>
+        <p>Premium SUV feel with comfort-oriented daily usability.</p>
+        <a class="model-card-cta" data-wa="Hi Lim, I am interested in Toyota Harrier" href="#" target="_blank" rel="noopener">Ask Harrier package →</a>
+      </article>
+      <article class="model-card" data-category="suv">
+        <img src="../design/assets/cars/fortuner.png" alt="Toyota Fortuner" loading="lazy" />
+        <span class="model-badge">SUV</span>
+        <h3>Fortuner</h3>
+        <p>Large SUV for stronger road presence and family travel.</p>
+        <a class="model-card-cta" data-wa="Hi Lim, I am interested in Toyota Fortuner" href="#" target="_blank" rel="noopener">Ask Fortuner package →</a>
+      </article>
+      <article class="model-card" data-category="mpv">
+        <img src="../design/assets/cars/veloz.png" alt="Toyota Veloz" loading="lazy" />
+        <span class="model-badge">MPV</span>
+        <h3>Veloz</h3>
+        <p>Family-friendly MPV for practical passenger space.</p>
+        <a class="model-card-cta" data-wa="Hi Lim, I am interested in Toyota Veloz" href="#" target="_blank" rel="noopener">Ask Veloz package →</a>
+      </article>
+      <article class="model-card" data-category="mpv">
+        <img src="../design/assets/cars/innova-zenix.png" alt="Toyota Innova Zenix" loading="lazy" />
+        <span class="model-badge">MPV</span>
+        <h3>Innova Zenix</h3>
+        <p>Roomier MPV option for comfort and family mobility.</p>
+        <a class="model-card-cta" data-wa="Hi Lim, I am interested in Toyota Innova Zenix" href="#" target="_blank" rel="noopener">Ask Innova package →</a>
+      </article>
+      <article class="model-card" data-category="mpv">
+        <img src="../design/assets/cars/alphard.png" alt="Toyota Alphard" loading="lazy" />
+        <span class="model-badge">Premium MPV</span>
+        <h3>Alphard</h3>
+        <p>Premium MPV for executive comfort and luxury passenger travel.</p>
+        <a class="model-card-cta" data-wa="Hi Lim, I am interested in Toyota Alphard" href="#" target="_blank" rel="noopener">Ask Alphard package →</a>
+      </article>
+      <article class="model-card" data-category="pickup">
+        <img src="../design/assets/cars/hilux.png" alt="Toyota Hilux" loading="lazy" />
+        <span class="model-badge">Pickup</span>
+        <h3>Hilux</h3>
+        <p>Pickup choice for work, business and tougher usage needs.</p>
+        <a class="model-card-cta" data-wa="Hi Lim, I am interested in Toyota Hilux" href="#" target="_blank" rel="noopener">Ask Hilux package →</a>
+      </article>
+      <article class="model-card" data-category="ev">
+        <img src="../design/assets/cars/bz4x.png" alt="Toyota bZ4X" loading="lazy" />
+        <span class="model-badge">Battery EV</span>
+        <h3>bZ4X</h3>
+        <p>Electric Toyota option for customers considering EV ownership.</p>
+        <a class="model-card-cta" data-wa="Hi Lim, I am interested in Toyota bZ4X" href="#" target="_blank" rel="noopener">Ask bZ4X package →</a>
+      </article>
+    </div>
+  </section>
+
+  <!-- ── WHY LIM ── -->
+  <section id="why-lim" class="section" aria-labelledby="why-heading">
+    <div class="section-heading">
+      <p class="eyebrow">Why contact Lim</p>
+      <h2 id="why-heading">What you get when you reach out directly.</h2>
+      <p>Buying a Toyota in Penang is easier when you have one clear contact who knows the models, the process and your options.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-card">
+        <div class="why-icon" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+        </div>
+        <h3>Fast WhatsApp reply</h3>
+        <p>Get answers to model questions, packages and availability without waiting for a showroom visit or callback.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        </div>
+        <h3>Local Penang knowledge</h3>
+        <p>Lim is based in Penang and can advise on current local model availability, dealership steps and service area coverage.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="2" ry="2"/><polyline points="9 12 11 14 15 10"/></svg>
+        </div>
+        <h3>Clear loan and booking steps</h3>
+        <p>Lim can walk you through basic document preparation, instalment estimates and what to expect at each stage of the process.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.95 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.93 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        </div>
+        <h3>Responsive follow-up</h3>
+        <p>Lim follows up to help with test drive scheduling, loan progress and any questions that come up after your first enquiry.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FINANCE / PROCESS ── -->
+  <section id="finance" class="finance section" aria-labelledby="finance-heading">
+    <div class="finance-copy">
+      <p class="eyebrow">Promotion &amp; financing</p>
+      <h2 id="finance-heading">Get the latest package before you decide.</h2>
+      <p>Promotions change by model and campaign period. WhatsApp Lim for the current quotation, instalment estimate and loan preparation checklist.</p>
+    </div>
+    <div>
+      <div class="steps" aria-label="Enquiry process steps">
+        <div class="step-row">
+          <span class="step-num" aria-hidden="true">1</span>
+          <span>Send a WhatsApp message to Lim</span>
+        </div>
+        <div class="step-row">
+          <span class="step-num" aria-hidden="true">2</span>
+          <span>Tell Lim your preferred model or describe your usage need</span>
+        </div>
+        <div class="step-row">
+          <span class="step-num" aria-hidden="true">3</span>
+          <span>Receive the latest package, instalment estimate and options</span>
+        </div>
+        <div class="step-row">
+          <span class="step-num" aria-hidden="true">4</span>
+          <span>Arrange test drive, loan preparation or booking step</span>
+        </div>
+      </div>
+      <div class="steps-cta">
+        <a class="btn btn-primary" data-wa="Hi Lim, I would like to start a Toyota enquiry" href="#" target="_blank" rel="noopener">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.124.555 4.118 1.524 5.847L.057 23.486a.5.5 0 0 0 .614.614l5.639-1.467A11.952 11.952 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.907 0-3.693-.504-5.23-1.385l-.374-.222-3.893 1.012 1.012-3.893-.222-.374A9.953 9.953 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+          Start your enquiry on WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FAQ ── -->
+  <section id="faq" class="section" aria-labelledby="faq-heading">
+    <div class="section-heading">
+      <p class="eyebrow">FAQ</p>
+      <h2 id="faq-heading">Common questions before buying a Toyota.</h2>
+    </div>
+    <div class="faq-list">
+      <details open>
+        <summary>Can I ask Lim about any Toyota model?</summary>
+        <p>Yes. Message Lim with the model you are interested in, or describe your usage need if you are not sure which model fits best.</p>
+      </details>
+      <details>
+        <summary>Can Lim help me compare models?</summary>
+        <p>Yes. Lim can help explain suitable options by category, budget range, family size, driving needs and current availability in Penang.</p>
+      </details>
+      <details>
+        <summary>Can Lim help with loan and financing guidance?</summary>
+        <p>Yes. Lim can explain basic document preparation, instalment estimates and next steps. Final loan approval depends on bank assessment.</p>
+      </details>
+      <details>
+        <summary>Can I arrange a test drive through WhatsApp?</summary>
+        <p>Yes. Test drive arrangements can be discussed through WhatsApp based on model and branch availability at the time of enquiry.</p>
+      </details>
+      <details>
+        <summary>Does Lim cover areas outside Penang?</summary>
+        <p>Lim is based in Penang and primarily serves buyers in the Penang area. Ask through WhatsApp if you are located nearby and want to check coverage.</p>
+      </details>
+      <details>
+        <summary>What happens after I send a WhatsApp message?</summary>
+        <p>Lim will reply with relevant model or package information based on your enquiry. There is no pressure to commit — ask as many questions as you need before deciding on next steps.</p>
+      </details>
+    </div>
+  </section>
+
+  <!-- ── LOCATION ── -->
+  <section class="location section" aria-labelledby="location-heading">
+    <div class="location-copy">
+      <p class="eyebrow">Penang coverage</p>
+      <h2 id="location-heading">Serving Toyota buyers around Penang.</h2>
+      <p>Lim is a Toyota sales advisor based in Penang. Contact through WhatsApp to ask about showroom location, available models and appointment.</p>
+    </div>
+    <div class="location-card">
+      <div class="location-detail">
+        <span class="placeholder-label">Replace before launch</span>
+        <strong>[Dealership / showroom name]</strong>
+        <p>[Full address, Penang]</p>
+      </div>
+      <a class="btn btn-primary" data-wa="Hi Lim, where is your Toyota showroom in Penang?" href="#" target="_blank" rel="noopener">Ask Lim on WhatsApp</a>
+    </div>
+  </section>
+
+  <!-- ── FINAL CTA ── -->
+  <div class="final-cta-wrap">
+    <div class="final-cta" aria-labelledby="final-cta-heading">
+      <p class="eyebrow">Ready to enquire?</p>
+      <h2 id="final-cta-heading">One WhatsApp message is all it takes.</h2>
+      <p>Tell Lim which model you are considering or what you need — and get a clear, no-pressure reply.</p>
+      <a class="btn btn-primary" data-wa="Hi Lim, I would like to know more about Toyota models in Penang" href="#" target="_blank" rel="noopener">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.124.555 4.118 1.524 5.847L.057 23.486a.5.5 0 0 0 .614.614l5.639-1.467A11.952 11.952 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.907 0-3.693-.504-5.23-1.385l-.374-.222-3.893 1.012 1.012-3.893-.222-.374A9.953 9.953 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+        WhatsApp Lim now
+      </a>
+    </div>
+  </div>
+
+</main>
+
+<!-- ── FOOTER ── -->
+<footer class="site-footer">
+  <nav class="footer-nav" aria-label="Footer navigation">
+    <a href="#models">Models</a>
+    <a href="#why-lim">Why Lim</a>
+    <a href="#finance">Finance</a>
+    <a href="#faq">FAQ</a>
+  </nav>
+  <p>© 2026 Lim Toyota Sales Advisor, Penang.</p>
+  <p>Vehicle availability, pricing, promotions and financing are subject to official Toyota Malaysia campaign terms, dealership confirmation and bank approval. This site is operated by an independent Toyota sales representative.</p>
+</footer>
+
+<!-- ── STICKY WHATSAPP ── -->
+<a class="sticky-whatsapp" data-wa="Hi Lim, I want to know more about Toyota models in Penang" href="#" target="_blank" rel="noopener" aria-label="WhatsApp Lim — Toyota enquiry">
+  <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.124.555 4.118 1.524 5.847L.057 23.486a.5.5 0 0 0 .614.614l5.639-1.467A11.952 11.952 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.907 0-3.693-.504-5.23-1.385l-.374-.222-3.893 1.012 1.012-3.893-.222-.374A9.953 9.953 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+  WhatsApp Lim
+</a>
+
+<script>
+  // ⚠️ REPLACE BEFORE LAUNCH — update WA_NUMBER with Lim's real WhatsApp number (e.g. "60123456789")
+  var WA_NUMBER = "60XXXXXXXXX";
+  var WA_BASE = "https://wa.me/" + WA_NUMBER + "?text=";
+
+  document.addEventListener("DOMContentLoaded", function () {
+    // Build all WhatsApp links from single WA_NUMBER source
+    document.querySelectorAll("[data-wa]").forEach(function (el) {
+      el.href = WA_BASE + encodeURIComponent(el.dataset.wa);
+    });
+
+    // Category filter
+    var filterBtns = document.querySelectorAll(".filter-btn");
+    var modelCards = document.querySelectorAll(".model-card");
+
+    filterBtns.forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        var cat = this.dataset.filter;
+        filterBtns.forEach(function (b) { b.setAttribute("aria-selected", "false"); });
+        this.setAttribute("aria-selected", "true");
+        modelCards.forEach(function (card) {
+          card.hidden = cat !== "all" && card.dataset.category !== cat;
+        });
+      });
+    });
+  });
+</script>
+
+</body>
+</html>
